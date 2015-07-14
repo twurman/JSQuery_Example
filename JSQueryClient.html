@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>JSQuery Converter Test</title>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <input type="text" id="type" name="type" size="20" onchange="updateDefaults(this.id, this.value)" /> 
+    <br>
+    <textarea rows="5" id="data" placeholder="Data" onchange="updateDefaults(this.id, this.value)"></textarea> 
+    <br>
+    <input type="text" id="tags" name="tags" size="20" onchange="updateDefaults(this.id, this.value)" /> 
+    <br>
+
+    <button class="btn" id="askServer">Ask Sirius</button>
+    <div id="response"></div>
+    
+
+    <script src="js/thrift.js"></script>
+    <script src="gen-js/SchedulerService.js"></script>
+    <script src="gen-js/QueryConversionService.js"></script>
+    <script src="gen-js/types_types.js"></script>
+    <script src="js/JSQueryClient.js"></script>
+  </body>
+</html>
