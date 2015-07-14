@@ -1,4 +1,6 @@
-include ../../Makefile.config
+# Set Boost path
+BOOST_LOCATION = /usr/local/boost_1_58_0
+BOOST_LIB = /usr/local/boost_1_58_0/stage/lib
 
 CXX = g++
 # Needed for linking
