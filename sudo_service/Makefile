@@ -12,7 +12,7 @@ LINK_FLAGS = -L$(BOOST_LIB) -lboost_program_options -lboost_filesystem -lboost_s
 TARGET_SERVER = server
 OBJECTS = $(GEN_DIR)/types_types.cpp $(GEN_DIR)/IPAService.cpp $(GEN_DIR)/SchedulerService.cpp IPAServer.cpp
 
-all: thrift $(TARGET_SERVER)
+all: clean thrift $(TARGET_SERVER)
 
 thrift:
 	thrift -r --gen cpp ../service.thrift

@@ -3,6 +3,9 @@ var storage = window.localStorage;
 var ip = "clarity04.eecs.umich.edu", port = "4444", numRuns = 0;
 
 function onload() {
+    document.getElementById("host").value = storage.getItem("host");
+    document.getElementById("port").value = storage.getItem("port");
+
     document.getElementById("type").value = storage.getItem("type");
     document.getElementById("data").value = storage.getItem("data");
     document.getElementById("tags").value = storage.getItem("tags");
@@ -24,7 +27,7 @@ function getAddress(ip, port, destination) {
 
 function query() {
     console.log("Getting HostPort from command center");    
-    var addr = getAddress(ip, port, 'cc');
+    var addr = getAddress(storage.getItem("host"), storage.getItem("port"), 'cc');
     var transport = new Thrift.TXHRTransport(addr);
     var protocol  = new Thrift.TJSONProtocol(transport);
     var client = new SchedulerServiceClient(protocol);
