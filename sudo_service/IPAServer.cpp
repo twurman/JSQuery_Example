@@ -48,6 +48,7 @@ class IPAServiceHandler : virtual public IPAServiceIf {
       cout << "Type: " << query.content[i].type << endl;
       cout << "Data: ";
       for(int j = 0; j < query.content[i].data.size(); j++) {
+        cout << j << " - ";
         cout << query.content[i].data[j] << ", ";
       }
       cout << endl;

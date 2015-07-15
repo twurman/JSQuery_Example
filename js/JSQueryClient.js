@@ -45,6 +45,8 @@ function query() {
     queryData.type = storage.getItem("type");
     queryData.data = new Array();
     queryData.data.push(storage.getItem("data"));
+    queryData.data.push(storage.getItem("data"));
+    queryData.data.push(storage.getItem("data"));
     queryData.tags = new Array();
     queryData.tags.push(storage.getItem("tags"));
 
