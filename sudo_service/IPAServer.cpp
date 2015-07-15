@@ -101,7 +101,7 @@ int main(int argc, char **argv){
   endpoint.port = port;
   
   RegMessage message;
-  message.app_name = "Sirius";
+  message.app_name = "sirius";
   message.endpoint = endpoint;
   try {
     cmdclient.registerBackend(message);

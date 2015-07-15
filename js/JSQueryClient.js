@@ -36,7 +36,7 @@ function query() {
 
 
 	console.log("Sending Query");
-    addr = getAddress(response.ip, response.port, 'Sirius');
+    addr = getAddress(response.ip, response.port, 'sirius');
 	transport = new Thrift.TXHRTransport(addr);
     protocol = new Thrift.TJSONProtocol(transport);
     client = new QueryConversionServiceClient(protocol);    //ipaserviceclient
