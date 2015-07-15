@@ -108,11 +108,10 @@ int main(int argc, char **argv){
   } catch(TTransportException exc) {
     cout << exc.what() << endl;
   }
-  
+  cmdtransport->close();
   cout << "Done" << endl;
 
   serverThread->join();
-  cmdtransport->close();
   return 0;
 }
 
