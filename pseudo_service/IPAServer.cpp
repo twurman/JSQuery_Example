@@ -88,9 +88,9 @@ int main(int argc, char **argv){
   if (argv[2]) {
     cc_port = atoi(argv[2]);
   } else {
-    cout << "Using default port for sudo cc..." << endl;
+    cout << "Using default port for pseudo cc..." << endl;
   }
-  cout << "Registering with sudo cc at port " << cc_port << "... " << endl;
+  cout << "Registering with pseudo cc at port " << cc_port << "... " << endl;
   boost::shared_ptr<TTransport> cmdtransport(new THttpClient("localhost", cc_port, "/"));
   boost::shared_ptr<TProtocol> cmdprotocol(new TJSONProtocol(cmdtransport));
   SchedulerServiceClient cmdclient(cmdprotocol);
