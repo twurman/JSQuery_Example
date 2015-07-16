@@ -41,7 +41,7 @@ function query() {
     protocol = new Thrift.TJSONProtocol(transport);
     client = new IPAServiceClient(protocol);    //ipaserviceclient
 
-    var queryData = new JSQueryData();
+    var queryData = new QueryInput();
     queryData.type = storage.getItem("type");
     queryData.data = new Array();
     queryData.data.push(storage.getItem("data"));
@@ -50,7 +50,7 @@ function query() {
     queryData.tags = new Array();
     queryData.tags.push(storage.getItem("tags"));
 
-    var query = new JSQuery();
+    var query = new QuerySpec();
     query.name = "";
     query.content = new Array();
     query.content.push(queryData);
