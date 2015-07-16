@@ -31,7 +31,7 @@ function query() {
     var transport = new Thrift.TXHRTransport(addr);
     var protocol  = new Thrift.TJSONProtocol(transport);
     var client = new SchedulerServiceClient(protocol);
-    var response = client.consultAddress("Sirius");
+    var response = client.consultAddress("sirius");
     console.log("Host: " + response.ip + ", Port: " + response.port);
 
 
